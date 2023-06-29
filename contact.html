@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Cop that Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/about.css">
+    <title>Contact Us</title>
+</head>
+<body class="tonka">
+    <!-- Load some js scripts -->
+    <script src="index.js"></script>
+
+    <div class="mobile-navbar">
+        <img src="assets/Inertia_Logo.jpg" alt="Inertia Logo" id="mobile-inertia-logo">
+
+        <button class="invisible_btn" type="button" onclick="toggleMenu()">
+            <img src="assets/HamburgerMenu.png" alt="Hamburger Menu" id="hamburger_menu">
+        </button>
+
+        <div id="mobile_menu">
+            <div class="mobile_text">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="desktop-navbar">
+        <div class="desktop-navbar-section">
+            <a href="index.html" onmouseover="animateLogo()" onmouseout="removeLogoAnimation()" href="#" class="logo" id="logo">IN</a>
+            <div id="desktop-menu">
+                <a href="about.html">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <button id="desktop-cta" onclick="window.location.href='contact.html'">Get Started</button>
+    </div>
+
+    <div id="contact">
+        <div class="contact-intro">
+            <p class="contact-title">Contact Us</p>
+            <p class="contact-context">Feel free to get in touch!</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-links">
+                <div class="contact-links-text">
+                    <p class="large-text">Contact Information</p>
+                    <p class="contact-time">Fill out the form and our team will get back to you shortly.</p>
+                </div>
+
+                <div class="contact-info-container">
+                    <div class="contact-info">
+                        <img src="assets/phone-icon.svg" alt="Phone" class="info-icon">
+                        <p>650 436 7478</p class="info-icon">
+                    </div>
+                    <div class="contact-info">
+                        <img src="assets/mail-icon.svg" alt="Mail" class="info-icon">
+                        <p>theinertiamarketing@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-icons">
+                    <a href="https://facebook.com" class="actual-link"><img src="assets/facebook.svg" alt="Facebook" class="contact-icon"></a>
+                    <a href="https://twitter.com" class="actual-link"><img src="assets/twitter.svg" alt="Twitter" class="contact-icon"></a>
+                    <a href="https://instagram.com" class="actual-link"><img src="assets/instagram.svg" alt="Instagram" class="contact-icon"></a>
+                    <a href="https://linkedin.com" class="actual-link"><img src="assets/linkedin.svg" alt="Linkedin" class="contact-icon"></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <div class="field-group">
+                    <div class="text-field">
+                        <input type="text" name="First Name" id="first-name" class="text-item" id="first-name">
+                        <p class="input-prompt">First Name</p>
+                    </div>
+
+                    <div class="text-field">
+                        <input type="text" name="Last Name" id="last-name" class="text-item" id="last-name">
+                        <p class="input-prompt">Last Name</p>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <div class="text-field">
+                        <input type="email" name="Email" id="email" class="text-item">
+                        <p class="input-prompt">Email</p>
+                    </div>
+
+                    <div class="text-field">
+                        <input type="tel" name="Phone Number" id="phone-number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" class="text-item">
+                        <p class="input-prompt">Phone Number</p>
+                    </div>
+                </div>
+
+                <div class="text-field">
+                    <textarea name="message" class="big-input" cols="30" rows="10" placeholder="Write your message" id="message"></textarea>
+                    <p class="input-prompt">Message</p>
+                </div>
+
+                <div class="button-container">
+                    <button class="send-button" id="submit-btn">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p class="footer-title">Social Media</p>
+                <div class="footer-links">
+                    <a href="https://github.com">Twitter</a>
+                    <a href="https://github.com">LinkedIn</a>
+                    <a href="https://github.com">Facebook</a>
+                    <a href="https://github.com">Instagram</a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <p class="footer-title">Company</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="desktop-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p class="footer-title">Social Media</p>
+                <div class="footer-links">
+                    <a href="https://github.com">Twitter</a>
+                    <a href="https://github.com">LinkedIn</a>
+                    <a href="https://github.com">Facebook</a>
+                    <a href="https://github.com">Instagram</a>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <p class="footer-title">Company</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+
+            <p class="footer-company">2022 @ Inertia LLC</p>
+        </div>
+    </div>
+    <!-- Shhhh -->
+    <script type="module" src="config.js"></script>
+        
+    <!-- Add some JS (mostly for form stuff rn) -->
+    <script type="module" src="email.js"></script>
+</body>
+</html>

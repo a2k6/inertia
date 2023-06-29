@@ -1,0 +1,59 @@
+@import url(../colors.css);
+
+.mobile-navbar {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mobile-inertia-logo {
+    margin-left: 10px;
+    z-index: 42; /* Meaning of Life */
+}
+
+.invisible_btn {
+    margin-right: 20px;
+    background: none;
+    border: none;
+    z-index: 42; /* Meaning of life */
+}
+
+#mobile_menu {
+    background-color: var(--color-green);
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Text Color */
+#mobile_menu a {
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10vh;
+}
+
+.mobile_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.desktop-navbar {
+    display: none;
+}

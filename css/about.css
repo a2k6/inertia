@@ -1,0 +1,24 @@
+/* Consistent default experience across browsers */
+@import url(reset.css);
+
+
+/* Navbar UI */
+@import url(navbar/mobile.css) (max-width: 650px);
+@import url(navbar/desktop.css) (min-width: 650px);
+
+/* About UI */
+@import url(about/mobile.css) (max-width: 650px);
+@import url(about/desktop.css) (min-width: 650px);
+
+/* Footer UI */
+@import url(footer/mobile.css) (max-width: 650px);
+@import url(footer/desktop.css) (min-width: 650px);
+
+/* Contact UI */
+@import url(contact/mobile.css) (max-width: 650px);
+@import url(contact/desktop.css) (min-width: 650px);
+
+/* Apply Styling to Everything */
+body {
+    font-family: "Inter", sans-serif !important;  /* Font weights: 300;400;500;600;700;800;900 */
+}

@@ -1,0 +1,68 @@
+@import url(../colors.css);
+
+#mobile-intro {
+    display: none;
+}
+
+#desktop-intro {
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.desktop-intro-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-intro-text p {
+    width: clamp(20px, 40vw, 400px);
+    font-size: 3.5em;
+    color: var(--color-black);
+    font-weight: 900;
+    text-align: center;
+}
+
+#desktop-contact-button {
+    margin-top: 5vh;
+    width: 110px;
+    height: 40px;
+    color: white;
+    font-family: "Inter", sans-serif !important;
+    font-weight: 400;
+    background-color: var(--color-green);
+    border: none;
+    border-radius: 7.5px;
+}
+
+#desktop-contact-button:hover {
+    box-shadow: 2px 5px 10px var(--color-green-shadows);
+    transition: all 300ms;
+}
+
+.desktop-intro-resizer {
+    width: clamp(100px, 50vw, 600px);
+}
+
+#desktop-hero {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all 250ms;
+}
+
+#desktop-hero:hover {
+    transform: rotate(3deg);
+    transition: all 250ms;
+}
+
+.desktop-colored-text {
+    background-image: linear-gradient(var(--rotation), var(--color-black), var(--color-green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
