@@ -11,19 +11,19 @@ function toggleMenu() {
     }
 }
 
-// Show menu
-// Change Icon to X
+// Show menu and Change Icon to X
 function showMenu() {
     let mobile_menu = document.getElementById("mobile_menu");
     document.body.style.overflow = "hidden";
     mobile_menu.style.visibility = "visible";
 
-    let mobile_image = document.getElementById("mobile-logo");
-    mobile_image.style.visibility = "hidden";
+    let mobile_text = document.getElementById("mobile-inertia-logo");
+    mobile_text.style.opacity = 0;
+    console.log("Opacity = " + mobile_text.style.opacity);
 
     // Change Menu to Close Buttton
     let menu = document.getElementById("hamburger_menu");
-    menu.src = "assets/CloseMenu.png"
+    menu.src = "assets/CloseMenu.png";
 }
 
 function hideMenu() {
@@ -31,12 +31,13 @@ function hideMenu() {
     mobile_menu.style.visibility = "hidden";
     document.body.style.overflow = "visible";
 
-    let mobile_image = document.getElementById("mobile-inertia-logo");
-    mobile_image.style.visibility = "visible";
+    let mobile_text = document.getElementById("mobile-inertia-logo");
+    mobile_text.style.opacity = 100;
+    console.log(mobile_text.style.opacity + " = the opacity");
 
     // Change Close Button to Menu
     let menu = document.getElementById("hamburger_menu");
-    menu.src = "assets/HamburgerMenu.png"
+    menu.src = "assets/HamburgerMenu.png";
 }
 
 //When you hover over the logo it animates out
@@ -57,7 +58,16 @@ function animateLogo() {
 //Undoes the animation when the user stops hovering over the logo
 function removeLogoAnimation() {
     let logo = document.getElementById("logo");
-    logo.innerHTML = "IN";
+    for (var i = 0; i < 5; i++) {
+    //Create a closure to protect the value of i
+        (function(i){
+            window.setTimeout(function(){
+                logo.innerHTML = logo.innerHTML.substring(0, logo.innerHTML.length - 1);
+                console.log(logo.innerHTML);
+            }, 200 - i*35);
+        }(i));
+    }
+    // logo.innerHTML = "IN";
 }
 
 //Rotates the gradient that is behind the momentum word on the homepage
@@ -75,6 +85,7 @@ function rotateGradient() {
     }
 }
 
+//Un-rotates the gradient that is behind the momentum word on the homepage
 function deRotateGradient() {
     var s = document.querySelector(':root');
     var input = currentDegrees - 90;
@@ -87,3 +98,6 @@ function deRotateGradient() {
           }(i));
     }
 }
+/*Consider either applying to whole block of text
+or make the whole block/just "momentum" have a graident 
+that moves left --> right so it looks like its speeding up*/
